@@ -1,0 +1,16 @@
+country_decisions = {
+	GLRY_spend_glory = {
+		potential = {
+			NOT = { has_country_flag = GLRY_spending_glory }
+			ai = no
+			army_professionalism = 0.20
+		}
+		allow = {
+			army_professionalism = 0.20
+		}
+		effect = {
+			country_event = { id = GLRY_prof.0 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
