@@ -1,0 +1,14 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GLRY_event_picture1"
+		texturefile = "gfx/event_pictures/GLRY_event_picture1.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GLRY_event_picture2"
+		texturefile = "gfx/event_pictures/GLRY_event_picture2.dds"
+		allwaystransparent = yes
+	}
+	
+}
