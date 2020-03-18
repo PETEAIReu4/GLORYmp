@@ -1,7 +1,7 @@
 ﻿l_english: 
  ### UI Professionalism changes
  ARMY_PROFESSIONALISM_TITLE:0 "§YGlory§!"
- ARMY_PROFESSIONALISM_DESC:1 "Glory is a measure of how memorable your country is. You can gain more by fighting wars and battles against other players."
+ ARMY_PROFESSIONALISM_DESC:1 "Glory is a measure of how memorable your country is. You can gain more by fighting wars and battles against other players. Glory points can be spent to unlock temporary and permanent modifiers."
  ARMY_PROFESSIONALISM_VALUE:0 "Glory: $VALUE|Y%2$"
  nothingness_modifier:0 "0 Glory points"
  supply_depot_modifier:1 "1 Glory point:"
