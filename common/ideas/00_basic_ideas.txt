@@ -52,11 +52,11 @@ plutocracy_ideas = {
 	category = MIL
 
 	bonus = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	tradition_of_payment = {
 		possible_mercenaries = 0.25
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.05
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
