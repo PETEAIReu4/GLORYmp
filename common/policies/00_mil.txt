@@ -1,0 +1,295 @@
+GLRY_policy_mil_1 = {
+	monarch_power = MIL
+
+	potential = {
+		has_1_MIL_groups = yes
+	}
+	allow = {
+		has_2_MIL_groups = yes
+	}
+
+	manpower_recovery_speed = 0.2
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_2 = {
+	monarch_power = MIL
+
+	potential = {
+		has_1_ADM_groups = yes
+	}
+	allow = {
+		has_2_ADM_groups = yes
+	}
+
+	infantry_power = 0.1
+	artillery_power = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_3 = {
+	monarch_power = MIL
+
+	potential = {
+		has_1_DIP_groups = yes
+	}
+	allow = {
+		has_2_DIP_groups = yes
+	}
+
+	land_morale = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_4 = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_1_DIP_groups = yes
+			has_1_ADM_groups = yes
+		}
+	}
+	allow = {
+		has_1_DIP_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	discipline = 0.05
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_5 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_2_ADM_groups = yes
+	}
+
+	land_maintenance_modifier = -0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_6 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_2_DIP_groups = yes
+	}
+
+	infantry_cost = -0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_7 = {
+	monarch_power = MIL
+
+	potential = {
+		has_2_MIL_groups = yes
+	}
+	allow = {
+		has_3_MIL_groups = yes
+	}
+
+	defensiveness = 0.25
+	global_spy_defence = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_8 = {
+	monarch_power = MIL
+
+	potential = {
+		has_2_ADM_groups = yes
+	}
+	allow = {
+		has_3_ADM_groups = yes
+	}
+
+	infantry_power = 0.2
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_9 = {
+	monarch_power = MIL
+
+	potential = {
+		has_2_DIP_groups = yes
+	}
+	allow = {
+		has_3_DIP_groups = yes
+	}
+
+	fire_damage = 0.15
+	fire_damage_received = -0.15
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_10 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+			has_4_MIL_groups = yes
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	leader_land_shock = 1
+	shock_damage = 0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_11 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+			has_4_MIL_groups = yes
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_1_DIP_groups = yes
+	}
+
+	leader_land_fire = 1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_12 = {
+	monarch_power = MIL
+
+	potential = {
+		has_3_MIL_groups = yes
+	}
+	allow = {
+		has_4_MIL_groups = yes
+	}
+	
+ 	siege_ability = 0.33
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_13 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_ADM_groups = yes
+				has_1_MIL_groups = yes
+			}
+			has_4_ADM_groups = yes
+		}
+	}
+	allow = {
+		has_4_ADM_groups = yes
+		has_1_MIL_groups = yes
+	}
+
+	fire_damage_received = -0.2
+	infantry_power = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_mil_14 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_DIP_groups = yes
+				has_1_MIL_groups = yes
+			}
+			has_4_DIP_groups = yes
+		}
+	}
+	allow = {
+		has_4_DIP_groups = yes
+		has_1_MIL_groups = yes
+	}
+
+	fire_damage = 0.2
+	artillery_power = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}

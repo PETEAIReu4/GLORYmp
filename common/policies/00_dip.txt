@@ -1,0 +1,429 @@
+GLRY_policy_dip_1 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_1_MIL_groups = yes
+			has_1_DIP_groups = yes
+		}
+	}
+	allow = {
+		has_1_MIL_groups = yes
+		has_1_DIP_groups = yes
+	}
+
+	diplomatic_annexation_cost = -0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_2 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_1_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+			has_2_MIL_groups = yes
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_1_DIP_groups = yes
+	}
+
+	trade_efficiency = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_3 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+			AND = {
+				has_1_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_2_DIP_groups = yes
+	}
+
+	merchants = 1
+	trade_range_modifier = 0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_4 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_2_ADM_groups = yes
+			AND = {
+				has_1_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_1_MIL_groups = yes
+		has_2_ADM_groups = yes
+	}
+
+	culture_conversion_cost = -0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_5 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_3_MIL_groups = yes
+			AND = {
+				has_2_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	global_trade_power = 0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_6 = {
+	monarch_power = DIP
+	
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_3_DIP_groups = yes
+	}
+
+	admiral_cost = -0.3
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_7 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+			AND = {
+				has_1_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_3_DIP_groups = yes
+	}
+
+	global_ship_trade_power = 0.2
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_8 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_3_DIP_groups = yes
+			AND = {
+				has_1_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_1_MIL_groups = yes
+		has_3_DIP_groups = yes
+	}
+
+	global_ship_cost = -0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_9 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_2_DIP_groups = yes
+			AND = {
+				has_1_ADM_groups = yes
+				has_1_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_DIP_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	trade_steering = 0.33
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_10 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+			AND = {
+				has_4_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_2_ADM_groups = yes
+	}
+
+	ship_durability = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_11 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+			AND = {
+				has_4_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_2_DIP_groups = yes
+	}
+
+	heavy_ship_power = 0.2
+	galley_power = 0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_12 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_4_MIL_groups = yes
+				has_3_ADM_groups = yes
+			}
+			AND = {
+				has_3_MIL_groups = yes
+				has_4_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_4_ADM_groups = yes
+	}
+
+	merchants = 2
+	caravan_power = 0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_13 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_3_ADM_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_4_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_4_ADM_groups = yes
+	}
+
+	leader_naval_fire = 1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_14 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_4_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_4_DIP_groups = yes
+	}
+
+	leader_naval_shock = 1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_15 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_MIL_groups = yes
+				has_3_ADM_groups = yes
+			}
+			AND = {
+				has_1_MIL_groups = yes
+				has_4_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_4_ADM_groups = yes
+	}
+
+	trade_efficiency = 0.15
+	global_trade_power = 0.3
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_16 = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_DIP_groups = yes
+				has_1_ADM_groups = yes
+			}
+			has_3_DIP_groups = yes
+		}
+	}
+	allow = {
+		has_3_DIP_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	trade_efficiency = 0.3
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_dip_17 = {
+	monarch_power = DIP
+
+	potential = {
+		has_3_DIP_groups = yes
+	}
+	allow = {
+		has_4_DIP_groups = yes
+	}
+
+	trade_efficiency = 0.2
+	trade_steering = 0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}

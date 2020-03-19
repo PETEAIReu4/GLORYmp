@@ -1,0 +1,398 @@
+GLRY_policy_adm_1 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_1_MIL_groups = yes
+			has_1_ADM_groups = yes
+		}
+	}
+	allow = {
+		has_1_MIL_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	core_creation = -0.25
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_2 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_1_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+			has_2_MIL_groups = yes
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_1_ADM_groups = yes
+	}
+
+	global_tax_modifier = 0.20
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_3 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_MIL_groups = yes
+				has_1_ADM_groups = yes
+			}
+			AND = {
+				has_1_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_2_ADM_groups = yes
+	}
+
+	production_efficiency = 0.15
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_4 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_2_DIP_groups = yes
+			AND = {
+				has_1_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_1_MIL_groups = yes
+		has_2_DIP_groups = yes
+	}
+
+	inflation_reduction = 0.4
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_5 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_3_MIL_groups = yes
+			AND = {
+				has_2_MIL_groups = yes
+				has_1_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_1_DIP_groups = yes
+	}
+
+	advisor_cost = -0.15
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_6 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_3_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_3_MIL_groups = yes
+		has_3_ADM_groups = yes
+	}
+
+	prestige = 1.5
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_7 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+			AND = {
+				has_1_MIL_groups = yes
+				has_3_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_3_ADM_groups = yes
+	}
+
+	stability_cost_modifier = -0.2
+	war_exhaustion = -0.03
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_8 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_3_ADM_groups = yes
+			AND = {
+				has_1_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_1_MIL_groups = yes
+		has_3_ADM_groups = yes
+	}
+
+	yearly_corruption = -0.4
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_9 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_2_ADM_groups = yes
+			AND = {
+				has_1_ADM_groups = yes
+				has_1_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_1_DIP_groups = yes
+		has_2_ADM_groups = yes
+	}
+
+	global_trade_goods_size_modifier = 0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_10 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_3_ADM_groups = yes
+			}
+			AND = {
+				has_4_MIL_groups = yes
+				has_2_ADM_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_3_ADM_groups = yes
+	}
+
+	development_cost = -0.10
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_11 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_3_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+			AND = {
+				has_4_MIL_groups = yes
+				has_2_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_3_DIP_groups = yes
+	}
+
+	build_cost = -0.15
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_12 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_4_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+			AND = {
+				has_3_MIL_groups = yes
+				has_4_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_4_MIL_groups = yes
+		has_4_DIP_groups = yes
+	}
+
+	technology_cost = -0.1
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_13 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_1_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+			AND = {
+				has_2_MIL_groups = yes
+				has_3_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_MIL_groups = yes
+		has_4_DIP_groups = yes
+	}
+
+	global_unrest = -5
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_14 = {
+	monarch_power = ADM
+
+	potential = {
+		has_3_ADM_groups = yes
+	}
+	allow = {
+		has_4_ADM_groups = yes
+	}
+
+	global_trade_goods_size_modifier = 0.2
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_15 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_1_DIP_groups = yes
+				has_2_ADM_groups = yes
+			}
+			has_3_ADM_groups = yes
+		}
+	}
+	allow = {
+		has_1_DIP_groups = yes
+		has_3_ADM_groups = yes
+	}
+
+	global_tax_modifier = 0.50
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
+
+GLRY_policy_adm_16 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				has_2_ADM_groups = yes
+				has_1_DIP_groups = yes
+			}
+			AND = {
+				has_1_ADM_groups = yes
+				has_2_DIP_groups = yes
+			}
+		}
+	}
+	allow = {
+		has_2_ADM_groups = yes
+		has_2_DIP_groups = yes
+	}
+
+	 	production_efficiency = 0.30
+	
+	ai_will_do = {
+		factor = 0.3
+	}
+}
