@@ -3,10 +3,10 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = GLRY_spending_glory }
 			ai = no
-			army_professionalism = 1
+			army_professionalism = 0.20
 		}
 		allow = {
-			army_professionalism = 1
+			army_professionalism = 0.20
 		}
 		effect = {
 			country_event = { id = GLRY_prof.0 }
