@@ -4,7 +4,7 @@
  GLRY_spend_glory_desc:0 "Spend your Glory to purchase temporary or permanent bonuses."
  #### GLRY spend glory event
  GLRY_prof.0.title:0 "Spend Glory"
- GLRY_prof.0.desc:0 "Choose how many Glory points you wish to spend:\n\nThe bottom option in all the menus always allows you to exit without spending any points!"
+ GLRY_prof.0.desc:0 "Choose how many Glory points you wish to spend:"
  GLRY_prof.0.1:0 "Spend 1 Glory point"
  GLRY_prof.0.2:0 "Spend 2 Glory points"
  GLRY_prof.0.3:0 "Spend 3 Glory points"
