@@ -4,6 +4,7 @@ tags={
 	"Balance"
 	"Military"
 }
-name="GloryMP"
+picture="thumbnail.png"
+name="GLORYmp"
 supported_version="1.29.5"
 remote_file_id="2022057317"
