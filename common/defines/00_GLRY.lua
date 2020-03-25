@@ -13,3 +13,8 @@ NDefines.NMilitary.WARGOAL_MAX_BONUS = 40									-- [25]
 
 --- MISC ---
 NDefines.NMilitary.SLACKEN_AP_DROP = 0.99 									-- [0.05] | button is disabled anyways, just backup fix for AI
+
+--- QOL CHANGES ---
+
+NDefines.NAI.PEACE_TIME_MONTHS = 30											-- [60]
+NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = -200							-- [-25]
