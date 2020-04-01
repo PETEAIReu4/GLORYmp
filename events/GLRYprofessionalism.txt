@@ -729,33 +729,27 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_country_flag = GLRY_give_glory_1 }
 		NOT = { ai = yes }
+		NOT = { has_country_flag = GLRY_give_glory_1 }
 		is_at_war = yes
 		OR = {
 			AND = {
 				is_in_war = {
-					duration = 400
+					duration = 500
 					attacker_leader = ROOT
 				}
 				any_country = {
-					is_in_war = {
-						attacker_leader = ROOT
-						defender_leader = THIS
-					}
+					defensive_war_with = ROOT
 					NOT = { ai = yes }
 				}
 			}
 			AND = {
 				is_in_war = {
-					duration = 400
+					duration = 500
 					defender_leader = ROOT
 				}
 				any_country = {
-					is_in_war = {
-						attacker_leader = THIS
-						defender_leader = ROOT
-					}
+					offensive_war_with = ROOT
 					NOT = { ai = yes }
 				}
 			}
@@ -920,23 +914,27 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_country_flag = GLRY_give_glory_2 }
 		NOT = { ai = yes }
+		NOT = { has_country_flag = GLRY_give_glory_2 }
 		is_at_war = yes
 		OR = {
-			any_country = {
+			AND = {
 				is_in_war = {
 					attacker_leader = ROOT
-					defender_leader = THIS
 				}
-				NOT = { ai = yes }
+				any_country = {
+					defensive_war_with = ROOT
+					NOT = { ai = yes }
+				}
 			}
-			any_country = {
+			AND = {
 				is_in_war = {
-					attacker_leader = THIS
 					defender_leader = ROOT
 				}
-				NOT = { ai = yes }
+				any_country = {
+					offensive_war_with = ROOT
+					NOT = { ai = yes }
+				}
 			}
 		}
 	}
