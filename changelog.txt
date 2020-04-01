@@ -1,0 +1,96 @@
+############# Glory 0.1 Changelog ################################################
+
+Replaced the army professionalism system with glory points.
+
+--- events ---
+
+Removed/changed events involving army professionalism from all events (listed below)
+
+aow_events.12
+army_professionalism_events.X (most of them)
+nobles_estate_events.1
+flavor_azt.4
+flavor_brapru.2
+flavor_brapru.6
+flavor_brapru.36
+flavor_eng.9112
+flavor_fra.5
+flavor_hun.16
+flavor_mch.1
+flavor_rus.16
+flavor_swe.3228
+flavor_swe.3244
+flavor_tur.3354
+flavor_tur.3357
+ideagroups.111
+ideagroups.310
+ideagroups.701
+ideagroups.702
+ideagroups.805
+ideagroups.806
+ideagroups.811
+ideagroups.1302
+ideagroups.1303
+ideagroups.1305
+ideagroups.1401
+ideagroups.1402
+investment_events.1
+4011
+personality_events.39
+5084
+streltsy_events.3
+streltsy_events.4
+streltsy_events.5
+tribal_federation_events.10
+
+--- decisions ---
+
+Removed state firearm/standardized uniforms events
+Added the spend glory decision
+
+--- missions ---
+
+Changed 2 missions for Mewar involving forts (Fortify rajputana, Found udaipur)
+
+--- on_actions ---
+
+Added an extra startup event to set professionalism to 0
+Changed the sack of X event chance to 20% (but only fires when winning siege against rivals now)
+Added event trigger for gaining glory on province change
+No longer gain 1% professionalism from hiring generals
+No longer lose 0.15% professionalism from hiring mercs
+Added event trigger for gaining glory after battles end
+
+--- buildings ---
+
+Changed fort levels to 1/2/3/4 from 2/4/6/8
+
+--- defines ---
+
+Garrison per fort level is now 2000 instead of 1000 (so total garrison size is unchanged, except for capital forts which have 1000 more)
+Now need only 2x the garrison to siege instead of 3x
+Assault mil point cost to 0 from 5
+Artillery/Naval barrage mil point cost to 25 from 50
+Ticking warscore to 10/year from 4.8 per year
+Max ticking warscore to 40 from 25
+Slacken AP cost to 99% from 5% (just so AI doesn't use it)
+Minimum relations to ally changed to -200 from -25
+AI war stubbornness changed to 30 months from 60
+
+--- government_reforms ---
+
+Added +1 forcelimit to daimyos (because you need 4 units to siege a capital now)
+
+--- professionalism ---
+
+Removed the bonuses from professionalism thresholds
+
+--- static_modifiers ---
+
+Low/High professionalism has no impact
+Drilling armies does not give professionalism
+
+--- gfx/interface ---
+
+Removed the slacken recruitment standards button from UI
+Changed most mentions of professionalism to glory, changed some icons
