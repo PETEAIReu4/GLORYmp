@@ -1087,3 +1087,55 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = GLRY_prof.16
+	title = "GLRY_prof.16.title"
+	desc = "GLRY_prof.16.desc"
+	picture = TOURNAMENT_eventPicture
+	
+	trigger = {
+		#always = no
+		is_great_power = yes
+		is_at_war = yes
+		NOT = { has_country_flag = GLRY_give_glory_1 }
+		OR = {
+			AND = {
+				is_in_war = {
+					duration = 30
+					attacker_leader = ROOT
+				}
+				any_country = {
+					is_great_power = yes
+					defensive_war_with = ROOT
+				}
+			}
+			AND = {
+				is_in_war = {
+					duration = 30
+					defender_leader = ROOT
+				}
+				any_country = {
+					is_great_power = yes
+					offensive_war_with = ROOT
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = GLRY_give_glory_1
+	}
+
+	option = {
+		name = "GLRY_prof.16.1"
+		add_country_modifier = { 
+			name = GLRY_morale_20
+			duration = 3650
+		}
+	}
+}
