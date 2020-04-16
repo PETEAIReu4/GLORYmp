@@ -786,16 +786,25 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {  
+		OR = {
 			owner = { has_country_flag = GLRY_give_glory_1 }
 			owner = {
 				overlord = { has_country_flag = GLRY_give_glory_1 }
 			}
 		}
-		OR = { 
+		OR = {
 			FROM = { has_country_flag = GLRY_give_glory_1 }
-			FROM = {
-				overlord = { has_country_flag = GLRY_give_glory_1 }
+			AND = {
+				FROM = {
+					overlord = {
+						has_country_flag = GLRY_give_glory_1
+					}
+				}
+				owner = {
+					NOT = {
+						overlord_of = FROM
+					}
+				}
 			}
 		}
 	}
