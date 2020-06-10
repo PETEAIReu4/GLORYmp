@@ -75,15 +75,7 @@ country_event = {
 	}
 	option = {
 		name = "GLRY_prof.1.b"
-		add_yearly_manpower = 3.0
-		hidden_effect = {
-			add_army_professionalism = -0.20
-		}
-		clr_country_flag = GLRY_spending_glory
-	}
-	option = {
-		name = "GLRY_prof.1.c"
-		add_yearly_sailors = 3.0
+		add_yearly_manpower = 4.0
 		hidden_effect = {
 			add_army_professionalism = -0.20
 		}
@@ -304,16 +296,6 @@ country_event = {
 		clr_country_flag = GLRY_spending_glory
 	}
 	option = {
-		name = "GLRY_prof.2.f"
-		create_general = {
-			tradition = 60
-		}
-		hidden_effect = {
-			add_army_professionalism = -0.40
-		}
-		clr_country_flag = GLRY_spending_glory
-	}
-	option = {
 		name = "GLRY_prof.0.q"
 		clr_country_flag = GLRY_spending_glory
 	}
@@ -506,20 +488,6 @@ country_event = {
 			duration = -1
 		}
 		remove_country_modifier = GLRY_firedealt_2
-		hidden_effect = {
-			add_army_professionalism = -0.60
-		}
-		clr_country_flag = GLRY_spending_glory
-	}
-	option = {
-		name = "GLRY_prof.3.e"
-		trigger = {
-			NOT { has_country_modifier = GLRY_morale_10 }
-		}
-		add_country_modifier = { 
-			name = GLRY_morale_10
-			duration = 3650
-		}
 		hidden_effect = {
 			add_army_professionalism = -0.60
 		}
@@ -761,33 +729,27 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_country_flag = GLRY_give_glory_1 }
 		NOT = { ai = yes }
+		NOT = { has_country_flag = GLRY_give_glory_1 }
 		is_at_war = yes
 		OR = {
 			AND = {
 				is_in_war = {
-					duration = 400
+					duration = 500
 					attacker_leader = ROOT
 				}
 				any_country = {
-					is_in_war = {
-						attacker_leader = ROOT
-						defender_leader = THIS
-					}
+					defensive_war_with = ROOT
 					NOT = { ai = yes }
 				}
 			}
 			AND = {
 				is_in_war = {
-					duration = 400
+					duration = 500
 					defender_leader = ROOT
 				}
 				any_country = {
-					is_in_war = {
-						attacker_leader = THIS
-						defender_leader = ROOT
-					}
+					offensive_war_with = ROOT
 					NOT = { ai = yes }
 				}
 			}
@@ -952,23 +914,27 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_country_flag = GLRY_give_glory_2 }
 		NOT = { ai = yes }
+		NOT = { has_country_flag = GLRY_give_glory_2 }
 		is_at_war = yes
 		OR = {
-			any_country = {
+			AND = {
 				is_in_war = {
 					attacker_leader = ROOT
-					defender_leader = THIS
 				}
-				NOT = { ai = yes }
+				any_country = {
+					defensive_war_with = ROOT
+					NOT = { ai = yes }
+				}
 			}
-			any_country = {
+			AND = {
 				is_in_war = {
-					attacker_leader = THIS
 					defender_leader = ROOT
 				}
-				NOT = { ai = yes }
+				any_country = {
+					offensive_war_with = ROOT
+					NOT = { ai = yes }
+				}
 			}
 		}
 	}

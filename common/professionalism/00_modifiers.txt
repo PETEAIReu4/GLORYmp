@@ -8,7 +8,6 @@ nothingness_modifier = {
 	trigger = {
 		always = yes
 	}
-	may_build_supply_depot = yes
 
 }
 

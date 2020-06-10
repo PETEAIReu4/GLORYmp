@@ -1,15 +1,15 @@
 ﻿l_english: 
  ### UI Professionalism changes
  ARMY_PROFESSIONALISM_TITLE:0 "§YGlory§!"
- ARMY_PROFESSIONALISM_DESC:1 "Glory is a measure of how memorable your country is. You can gain more by fighting wars and battles against other players."
+ ARMY_PROFESSIONALISM_DESC:1 "Glory is a measure of how memorable your country is. You can gain more by fighting wars and battles against other players. Glory points can be spent to unlock temporary and permanent modifiers."
  ARMY_PROFESSIONALISM_VALUE:0 "Glory: $VALUE|Y%2$"
  nothingness_modifier:0 "0 Glory points"
- supply_depot_modifier:1 "1 Glory point:"
- refill_garrison_modifier:1 "2 Glory points:"
- return_manpower_modifier:1 "3 Glory points:"
- general_cost_modifier:1 "4 Glory points:"
- reserves_organisation_modifier:1 "5 Glory points:"
- PROFESSIONALISM_MARKER_TOOLTIP:0 "$NAME|Y$\nRequired Glory: $VALUE|W%1$"
+ supply_depot_modifier:1 "1 Glory point can be spent on:§W\n- Manpower\n- Money\n- Prestige\n- §GPermanent §WNational tax modifier\n- §GPermanent §WDiplomat"
+ refill_garrison_modifier:1 "2 Glory points can be spent on:§W\n- Monarch points\n- §YTemporary §WInfantry combat ability\n- §GPermanent §WGoods produced modifier\n- §GPermanent §WNumber of states\n- §GPermanent §WMissionary"
+ return_manpower_modifier:1 "3 Glory points can be spent on:§W\n- General with 100 tradition\n- §GPermanent §WShock damage\n- §GPermanent §WFire damage\n- §GPermanent §WMerchants\n- §GPermanent §WColonists"
+ general_cost_modifier:1 "4 Glory can be spent on:§W\n- §YTemporary §WDiscipline\n- §GPermanent §WNational manpower modifier\n- §GPermanent §WLand force limit modifier\n- §GPermanent §WConstruction cost\n- §GPermanent §WIdea cost"
+ reserves_organisation_modifier:1 "5 Glory can be spent on:§W\n- §YTemporary §WMorale of armies\n- §GPermanent §WMorale of armies\n- §GPermanent §WDiscipline\n- §GPermanent §WTechnology cost\n- §GPermanent §WTrade steering"
+ PROFESSIONALISM_MARKER_TOOLTIP:0 "$NAME|Y$"
  ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:0 ""
  NEW_ARMY_PROFESSIONALISM_ABILITY_TITLE:0 "New Glory point gained"
  NEW_ARMY_PROFESSIONALISM_ABILITY_SETUP:0 "When you gain another Glory point"
@@ -23,3 +23,36 @@
  SET_ARMYPROF_EFFECT:0 "Set Glory to $PERC|Y$\n"
  LEDGER_AP:0 "Glory"
  ARMY_PROFESSIONALISM_ICON_TIP:1 "$TITLE|Y$"
+ ### Idea group changes
+ # by Maxo
+ spy_ideas:0 "Navigation Ideas" #espionage
+ agent_training:0 "Mercantilism"
+ agent_training_desc:0 "It is untenable to say that foreign economies do not seek the destruction of our great nation. In order to win in this necessary conflict, we must strengthen our rule of the waves."
+ vetting:0 "Loyal Diplomatic Corps"
+ vetting_desc:0 "We cannot afford to lose any men to foreign agents, unless we wish to see our rule fall to ruin. We must ensure that we have a loyal stock of ambassadors and diplomats ready to further the cause of our nation."
+ additional_loyalist_recruitment:0 "Press Gangs"
+ additional_loyalist_recruitment_desc:0 "To man a great navy such as ours, we are in constant demand of sailors. Impressment is a tragic but necessary sacrifice we must impose upon both the people of our nation and any hostile sailors we capture."
+ claim_fabrication:0 "Defensive Expansion"
+ claim_fabrication_desc:0 "The only way to ensure our rivals remain crippled is to remove their bases of power. If the graet burden of annexing their land must fall upon us, so be it."
+ audit_checks:0 "Timber Production"
+ audit_checks_desc:0 "The last thing our navy should fall prey to is a reliance upon foreign materials - what should happen if the forests of the world unite against us? We must secure a stable source of naval supplies to maintain our autonomy."
+ spy_ideas_bonus:0 "Full Navigation"
+ additional_diplomats:0 "Agricultural Taxes"	#expansion goods produced
+ additional_diplomats_desc:0 "Regional agriculture often leads to lowered production, and its prevalence grows from the belief that subsistence farming is not a disservice to the nation. We must cut this out root and stem - by mandating that farmers pay taxes in the form of currency, they will be forced to begin bringing the fruits of their labor to the market, increasing our wealth."
+ sheltered_ports:0 "Signal Flags"	#blockade/naval width
+ sheltered_ports_desc:0 "Our naval officers have been drilled relentlessly in formation tactics, which brings our navy many benefits when it comes to warfare. One such tactic is the use of signal flags to send messages from one ship to another, which enables our navy to spread itself out much more liberally during combat."
+ naval_fighting_instruction:0 "Merchant Marine"	#foreign trade power
+ naval_fighting_instruction_desc:0 "To establish our naval presence, a strong military navy is not the only thing we must foster. Should our nation have no merchants, no traders, then our navy serves no purpose. Thus we must encourage more traders to participate in the thalassocracy we have worked so hard to create."
+ improved_rams:0 "Grand Armada"	#heavy cost
+ improved_rams_desc:0 "The seas are larger than any one ship could ever hope to sail, which is why to keep our dominance of the waves we must have a large fleet capable of maintaining an empire on which the sun shall never set. In order to finance this operation, we must standardize the production of all big ships."
+ noble_resilience:0 "Military Academies"	#land fire leader
+ noble_resilience_desc:0 "The rules of warfare have been changing in recent times, and it appears that the age of knights may be coming to a close. There is a reason muskets and guns are not permitted in jousting tournaments, and while that reason is out of respect for the tournament, it's still true that firearms are becoming more and more important every passing day. We must study these new schools of warfare lest we be left in the dust."
+ improved_manuever:0 "Ministry of Rationing"	#reinf cost
+ improved_manuever_desc:0 "By having a centralized office of military supply, we can ensure that our troops never rest hungry or cold. At least, that is the ideal - as it is, we can cut costs dramatically while preserving the full functionality of our military performance."
+ escort_ships:0 "Foreign Drill Instructors"	#dril lgain
+ escort_ships_desc:0 "Constant drilling in traditional tactics has reached a point of diminishing returns. If we want to remain competitive militarily and have our troops prepared for any engagement, we must hire foreign officers with their own wealth of experiences to instruct our soldiers."
+ naval_drill:0 "Military Bureaucracy"	#at from battle
+ naval_drill_desc:0 "While keeping records isn't particularly fun, keeping track of when we found success and how preciesly we found it is a vital tool to ensure we continue finding victories."
+ copper_bottoms:0 "Traditions of Legion"	#movespeed
+ copper_bottoms_desc:0 "Roads are useful for far more than commerce - the ability for an army to arrive from point A to point B in half the time is often more decisive in conflicts than battles are. The era of maneuver warfare has begun, and we will not be outflanked by anyone."
+ #
