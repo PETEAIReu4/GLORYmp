@@ -816,10 +816,6 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 700
-		modifier = {
-			factor = 0.8
-			NOT = { army_tradition = 50 }
-		}
 	}
 	
 	immediate = {
@@ -859,7 +855,6 @@ country_event = {
 		reduce_estate_nobles_loyalty_effect = yes
 		add_army_tradition = 5
 		add_prestige = 5
-		add_yearly_manpower = -0.20
 		event_target:cheating_rolls = {
 			area = {
 				limit = {

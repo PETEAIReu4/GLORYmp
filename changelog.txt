@@ -85,6 +85,10 @@ Added +1 forcelimit to daimyos (because you need 4 units to siege a capital now)
 
 Removed the bonuses from professionalism thresholds
 
+--- parliament_bribes ---
+
+pay_armyprofessionalism.txt removed
+
 --- static_modifiers ---
 
 Low/High professionalism has no impact
