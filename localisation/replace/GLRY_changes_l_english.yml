@@ -5,7 +5,7 @@
  ARMY_PROFESSIONALISM_VALUE:0 "Glory: $VALUE|Y%2$"
  nothingness_modifier:0 "0 Glory points"
  supply_depot_modifier:1 "1 Glory point can be spent on:§W\n- Manpower\n- Money\n- Prestige\n- §GPermanent §WNational tax modifier\n- §GPermanent §WDiplomat"
- refill_garrison_modifier:1 "2 Glory points can be spent on:§W\n- Monarch points\n- §YTemporary §WInfantry combat ability\n- §GPermanent §WGoods produced modifier\n- §GPermanent §WNumber of states\n- §GPermanent §WMissionary"
+ refill_garrison_modifier:1 "2 Glory points can be spent on:§W\n- Monarch points\n- §YTemporary §WInfantry combat ability\n- §GPermanent §WGoods produced modifier\n- §GPermanent §WGoverning capacity\n- §GPermanent §WMissionary"
  return_manpower_modifier:1 "3 Glory points can be spent on:§W\n- General with 100 tradition\n- §GPermanent §WShock damage\n- §GPermanent §WFire damage\n- §GPermanent §WMerchants\n- §GPermanent §WColonists"
  general_cost_modifier:1 "4 Glory can be spent on:§W\n- §YTemporary §WDiscipline\n- §GPermanent §WNational manpower modifier\n- §GPermanent §WLand force limit modifier\n- §GPermanent §WConstruction cost\n- §GPermanent §WIdea cost"
  reserves_organisation_modifier:1 "5 Glory can be spent on:§W\n- §YTemporary §WMorale of armies\n- §GPermanent §WMorale of armies\n- §GPermanent §WDiscipline\n- §GPermanent §WTechnology cost\n- §GPermanent §WTrade efficiency"
@@ -55,4 +55,6 @@
  naval_drill_desc:0 "While keeping records isn't particularly fun, keeping track of when we found success and how preciesly we found it is a vital tool to ensure we continue finding victories."
  copper_bottoms:0 "Traditions of Legion"	#movespeed
  copper_bottoms_desc:0 "Roads are useful for far more than commerce - the ability for an army to arrive from point A to point B in half the time is often more decisive in conflicts than battles are. The era of maneuver warfare has begun, and we will not be outflanked by anyone."
+ diplomatic_ideas:0 "Imperial Ideas"
+ diplomatic_ideas_bonus:0 "Full Imperial"
  #

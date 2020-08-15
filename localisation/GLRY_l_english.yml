@@ -30,9 +30,9 @@
  GLRY_prof.2.c1:0 "Goods produced 1/3"
  GLRY_prof.2.c2:0 "Goods produced 2/3"
  GLRY_prof.2.c3:0 "Goods produced 3/3"
- GLRY_prof.2.d1:0 "Additional states 1/3"
- GLRY_prof.2.d2:0 "Additional states 2/3"
- GLRY_prof.2.d3:0 "Additional states 3/3"
+ GLRY_prof.2.d1:0 "Governing capacity 1/3"
+ GLRY_prof.2.d2:0 "Governing capacity 2/3"
+ GLRY_prof.2.d3:0 "Governing capacity 3/3"
  GLRY_prof.2.e:0 "Temporary military boost"
  GLRY_prof.2.f:0 "General with 60 Army tradition"
  #### GLRY spend 2 glory mana
