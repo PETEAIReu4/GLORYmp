@@ -18,3 +18,7 @@ NDefines.NMilitary.SLACKEN_AP_DROP = 0.99 									-- [0.05] | button is disable
 
 NDefines.NAI.PEACE_TIME_MONTHS = 30											-- [60]
 NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = -200							-- [-25]
+
+--- ORTHODOX ---
+
+NDefines.NReligion.ORTHODOX_ICON_DURATION_MONTHS = 120						-- [240]
