@@ -700,6 +700,7 @@ country_event = {
 		}
 		add_years_of_income = -0.25
 		add_army_tradition = 10
+		add_army_prestige = 10
 	}
 	option = { 
 		name = streltsy_events.3.b #There is no need to be alarmed.
@@ -750,6 +751,7 @@ country_event = {
 			}
 		} 
 		add_years_of_income = -0.25
+		add_army_tradition = 10
 		add_government_power = {
 			government_mechanic = russian_mechanic
 			which = MIL
@@ -822,6 +824,7 @@ country_event = {
 
 	option = {
 		name = streltsy_events.5.a #
+		add_army_tradition = 10
 		add_country_modifier = {
 			name = "streltsy_garrison"
 			duration = 3650

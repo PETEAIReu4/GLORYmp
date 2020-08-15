@@ -476,6 +476,7 @@ country_event = {
 	option = {		# Regional Conscription
 		name = "flavor_swe.EVTOPTA3228"
 		ai_chance = { factor = 80 }
+		add_army_tradition = 10
 		add_country_modifier = {
 			name = swedish_military_reforms
 			duration = -1
@@ -485,15 +486,18 @@ country_event = {
 	option = {		# Mercenary Core
 		name = "flavor_swe.EVTOPTB3228"
 		ai_chance = { factor = 5 }
+		add_prestige = 15
 		add_country_modifier = {
 			name = swedish_mercenary_core
 			duration = -1
 		}
-	add_innovativeness_small_effect = yes
+		add_innovativeness_small_effect = yes
+		custom_tooltip = generic_more_mercs_available_indefinite_tt
 	}
 	option = {		# Naval Expansion
 		name = "flavor_swe.EVTOPTC3228"
 		ai_chance = { factor = 15 }
+		add_navy_tradition = 10
 		add_country_modifier = {
 			name = swedish_naval_reforms
 			duration = -1
@@ -1077,6 +1081,7 @@ country_event = {
 	option = {		# Reform the army.
 		name = "flavor_swe.EVTOPTA3244"
 		ai_chance = { factor = 90 }
+		add_army_tradition = 10
 		add_country_modifier = {
 			name = the_great_army_reorganization
 			duration = -1
@@ -1981,7 +1986,7 @@ country_event = {
 		name = "flavor_swe.EVTOPTA3262"
 		remove_country_modifier = age_of_fredom
 		add_government_reform = political_absolutism_reform
-		set_legacy_government = enlightened_despotism
+		#set_legacy_government = enlightened_despotism
 	}
 	option = {		# No more tyrants!
 		name = "flavor_swe.EVTOPTB3262"

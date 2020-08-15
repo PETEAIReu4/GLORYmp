@@ -24,12 +24,15 @@ GLRY_goods_3 = {
 }
 GLRY_states_1 = {
 	max_states = 5
+	governing_capacity = 200
 }
 GLRY_states_2 = {
 	max_states = 10
+	governing_capacity = 400
 }
 GLRY_states_3 = {
 	max_states = 15
+	governing_capacity = 600
 }
 GLRY_ica_10 = {
 	infantry_power = 0.1
@@ -98,5 +101,5 @@ GLRY_techcost_1 = {
 	technology_cost = -0.10
 }
 GLRY_steering_1 = {
-	trade_steering = 0.50
+	trade_efficiency = 0.30
 }

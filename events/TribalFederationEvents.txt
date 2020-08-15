@@ -922,7 +922,7 @@ country_event = {
 	option = {
 		name = tribal_federation_events.10.a #Let us expand the honor guard.
 		add_tribal_allegiance = 10
-		add_army_tradition = -5
+		add_prestige = 10
 		ai_chance = {
 			factor = 25
 		}
@@ -930,7 +930,7 @@ country_event = {
 	option = {
 		name = tribal_federation_events.10.b #We need men of ability, not more meaningless ceremony.
 		add_tribal_allegiance = -10
-		add_army_tradition = 5
+		add_yearly_manpower = 0.5
 		ai_chance = {
 			factor = 75
 		}

@@ -424,7 +424,6 @@ country_event = {
 		NOT = { has_country_modifier = just_settlement_modifier }
 		any_owned_province = {
 			is_state = yes
-			has_estate = no
 			local_autonomy = 50
 			is_core = ROOT
 			controlled_by = owner
@@ -461,7 +460,6 @@ country_event = {
 				local_autonomy = 50
 				is_core = ROOT
 				is_state = yes
-				has_estate = no
 				controlled_by = owner
 				NOT = { has_province_modifier = increasing_local_authority }
 			}
@@ -2100,7 +2098,6 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				is_state = yes
-				has_estate = no
 				local_autonomy = 40
 				NOT = { has_province_modifier = local_legal_reform }
 			}
@@ -2112,7 +2109,6 @@ country_event = {
 				}
 				add_local_autonomy = -15
 			}
-			custom_tooltip = personality_events.29.b.tt
 		}
 	}
 }
@@ -2437,11 +2433,15 @@ country_event = {
 	}
 	option = {
 		name = "personality_events.35.b"
-		create_conquistador = 50
+		create_conquistador = {
+			tradition = 50
+		}
 	}
 	option = {
 		name = "personality_events.35.c"
-		create_explorer = 50
+		create_explorer = {
+			tradition = 50
+		}
 	}
 }
 
@@ -2576,6 +2576,7 @@ country_event = {
 
 	option = { # hold tournaments for two years
 		name = "personality_events.39.a"
+		add_army_tradition = 10
 		add_ruler_modifier = {
 			name = "hosting_tournament"
 			duration = 3650
@@ -2583,6 +2584,7 @@ country_event = {
 	}
 	option = { # drill troops for seven years
 		name = "personality_events.39.b"
+		add_army_tradition = 10
 		add_ruler_modifier = {
 			name = "drilling_troops"
 			duration = 2555
