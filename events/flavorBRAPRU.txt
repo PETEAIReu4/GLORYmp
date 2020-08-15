@@ -72,7 +72,7 @@ country_event = {
 		name = "flavor_brapru.EVTOPTA3518"
 		add_army_tradition = 20
 		add_mil_power = 150
-		add_presige = 10
+		add_prestige = 10
 	}
 }
 
