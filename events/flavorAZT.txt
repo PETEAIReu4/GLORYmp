@@ -197,7 +197,7 @@ country_event = {
 	option = {
 		name = flavor_azt.4.a #Implement the Sumptuary Laws.
 		add_adm_power = -100
-		add_prestige = 10
+		add_army_tradition = 5
 		add_country_modifier = {
 			name = azt_sumptuary_laws
 			duration = -1
@@ -852,7 +852,7 @@ country_event = {
 		if = {
 			limit = { government = native }
 			change_government = tribal
-			set_legacy_government = tribal_despotism_legacy
+			#set_legacy_government = tribal_despotism_legacy
 		}
 	}
 	option = { #Let them continue worship there.

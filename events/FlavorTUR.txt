@@ -144,6 +144,7 @@ country_event = {
 	option = {		# Great Army Reform
 		name = "flavor_tur.EVTOPTA3354"
 		ai_chance = { factor = 50 }
+		add_army_tradition = 10
 		add_country_modifier = {
 			name = tur_army_reform
 			duration = 7300
@@ -152,6 +153,8 @@ country_event = {
 	option = {		# Reform Army and Navy
 		name = "flavor_tur.EVTOPTB3354"
 		ai_chance = { factor = 25 }
+		add_army_tradition = 5
+		add_navy_tradition = 5
 		add_country_modifier = {
 			name = tur_army_and_navy_reform
 			duration = 7300
@@ -160,6 +163,7 @@ country_event = {
 	option = {		# Great Navy Reform
 		name = "flavor_tur.EVTOPTC3354"
 		ai_chance = { factor = 25 }
+		add_navy_tradition = 10
 		add_country_modifier = {
 			name = tur_navy_reform
 			duration = 7300
@@ -191,6 +195,7 @@ country_event = {
 	option = {		# Found the Enderun
 		name = "flavor_tur.EVTOPTA3357"
 		add_years_of_income = -0.10
+		add_prestige = 10
 		add_country_modifier = {
 			name = enderun_academy
 			duration = 3650
@@ -199,6 +204,7 @@ country_event = {
 	}
 	option = {		# Expand the Timariot System instead
 		name = "flavor_tur.EVTOPTB3357"
+		add_army_tradition = 10
 		add_country_modifier = {
 			name = expanded_timariot_system
 			duration = 3650

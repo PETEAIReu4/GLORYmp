@@ -12,13 +12,16 @@ country_event = {
 	title = army_professionalism_events.1.t
 	desc = army_professionalism_events.1.d
 	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	goto = from
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		NOT = { tag = REB }
-		FROM = {
-			owner = {
-				is_rival = ROOT
+		OR = {
+			FROM = {
+				owner = {
+					is_rival = ROOT
+				}
 			}
 		}
 		NOT = {
@@ -105,6 +108,15 @@ country_event = {
 	}
 	option = {
 		name = army_professionalism_events.1.c #Such are the rules of warfare
+		trigger = {
+			NOT = {
+				has_dlc = "Emperor"
+				FROM = {
+					is_capital = yes
+					owned_by = PAP
+				}
+			}
+		}
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -143,6 +155,70 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = army_professionalism_events.1.d2 # plunder the curia treasury
+		trigger = {
+			has_dlc = "Emperor"
+			FROM = {
+				is_capital = yes
+				owned_by = PAP
+			}
+		}
+		highlight = yes
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_core = FROM
+			}
+			modifier = {
+				factor = 0
+				primary_culture = FROM
+			}
+			modifier = {
+				factor = 5
+				has_reform = steppe_horde
+			}
+			modifier = {
+				factor = 100
+				NOT = {
+					religion = catholic
+				}
+			}
+			modifier = {
+				factor = 100
+				religion = catholic
+				OR = {
+					ruler_has_personality = sinner_personality
+					ruler_has_personality = malevolent_personality
+				}
+			}
+		}
+		add_treasury = 1000
+		add_prestige = -20
+		add_horde_unity = 5
+		add_loot_from_province_effect = yes
+		FROM = {
+			province_event = { id = army_professionalism_events.3 }
+			tooltip = {
+				add_devastation = 100
+				add_base_production = -2
+			}
+		}
+		tooltip = {
+			reduce_curia_treasury_big_effect = yes
+			event_target:attacked_country = {
+				add_opinion = {
+					who = ROOT
+					modifier = sack_of_x
+				}
+				add_country_modifier = {
+					name = "enemies_sacked_city"
+					duration = 3650
+				}
+			}
+		}
+	}
 }
 
 #Sack of X
@@ -151,6 +227,7 @@ province_event = {
 	title = army_professionalism_events.2.t
 	desc = army_professionalism_events.2.d
 	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	goto = root
 
 	is_triggered_only = yes
 
@@ -170,15 +247,53 @@ province_event = {
 province_event = {
 	id = army_professionalism_events.3
 	title = army_professionalism_events.3.t
-	desc = army_professionalism_events.3.d
+	desc = {
+		trigger = {
+			owner = { NOT = { tag = PAP } }
+		}
+		desc = army_professionalism_events.3.d
+	}
+	desc = {
+		trigger = {
+			owner = { tag = PAP }
+		}
+		desc = army_professionalism_events.3.d2
+	}
 	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	goto = root
 
 	is_triggered_only = yes
 
 	option = {
 		name = army_professionalism_events.3.a #Barbarians!
+		trigger = {
+			NOT = { 
+				owner = { tag = PAP }
+				has_dlc = "Emperor"
+			}
+		}
 		add_devastation = 100
 		add_base_production = -2
+		owner = {
+			add_country_modifier = {
+				name = "enemies_sacked_city"
+				duration = 3650
+			}
+			add_opinion = {
+				who = FROM
+				modifier = sack_of_x
+			}
+		}
+	}
+	option = {
+		name = army_professionalism_events.3.b
+		trigger = {
+			owner = { tag = PAP }
+			has_dlc = "Emperor"
+		}
+		add_devastation = 100
+		add_base_production = -2
+		reduce_curia_treasury_big_effect = yes
 		owner = {
 			add_country_modifier = {
 				name = "enemies_sacked_city"
@@ -230,9 +345,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 
 	option = {
@@ -244,6 +357,7 @@ country_event = {
 	}
 	option = {
 		name = army_professionalism_events.4.b #Let them live of the land
+		goto = delayed_salaries_province
 		ai_chance = {
 			factor = 25
 		}
@@ -323,10 +437,12 @@ country_event = {
 		}
 	}
 	
+	is_triggered_only = yes
+
 	mean_time_to_happen = {
-		months = 500
+		days = 1
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			NOT = { had_recent_war = 20 } #20 year since last war
 		}
 	}
@@ -341,11 +457,12 @@ country_event = {
 	}
 	option = {
 		name = army_professionalism_events.5.b #We can let this slip for now.
+		goto = soldier_province
 		ai_chance = {
 			factor = 75
 		}
 		add_army_tradition = -5
-		add_yearly_manpower = -0.5
+		add_prestige = -10
 		event_target:soldier_province = {
 			area = {
 				limit = { owned_by = ROOT }
@@ -375,8 +492,6 @@ country_event = {
 			NOT = { alliance_with = ROOT }
 			NOT = { war_with = ROOT }
 			NOT = { truce_with = ROOT }
-			army_tradition = 60
-			army_tradition = ROOT
 		}
 	}
 	
@@ -389,17 +504,13 @@ country_event = {
 					NOT = { alliance_with = ROOT }
 					NOT = { war_with = ROOT }
 					NOT = { truce_with = ROOT }
-					army_tradition = 60
-					army_tradition = ROOT
 				}
 				save_event_target_as = professional_country
 			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 
 	option = {
@@ -407,9 +518,17 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_years_of_income = -0.75
-		add_army_tradition = 10
-		add_prestige = 5
+		if = {
+			limit = {
+				monthly_income = 10
+			}
+			add_years_of_income = -0.5
+		}
+		else = {
+			add_treasury = -60
+		}
+		add_army_tradition = 5
+		add_prestige = 10
 		event_target:professional_country = {
 			add_opinion = {
 				modifier = hired_defectors
@@ -469,12 +588,10 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		is_at_war = no
-		army_tradition = 40
+		NOT = { has_country_modifier = wargames }
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 
 	option = {
@@ -484,8 +601,11 @@ country_event = {
 		}
 		add_years_of_income = -0.25
 		add_yearly_manpower = -0.25
-		add_army_tradition = 10
 		add_prestige = 15
+		add_country_modifier = {
+			name = "wargames"
+			duration = 3650
+		}
 	}
 	option = {
 		name = army_professionalism_events.8.b #
@@ -514,9 +634,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
@@ -538,14 +656,14 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_yearly_manpower = -0.5
+		add_prestige = -10
 	}
 	option = {
 		name = army_professionalism_events.9.b #We will have to let it be.
 		ai_chance = {
 			factor = 25
 		}
-		add_corruption = 0.5
+		add_corruption = 0.25
 	}
 }
 
@@ -561,9 +679,7 @@ country_event = {
 		is_at_war = yes
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 
 	option = {
@@ -571,8 +687,7 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_army_tradition = -5
-		add_prestige = 15
+		add_army_tradition = 10
 		add_estate_nobles_loyalty_effect = yes
 		reduce_estate_burghers_loyalty_effect = yes
 	}
@@ -581,8 +696,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_army_tradition = 15
-		add_prestige = -15
+		add_prestige = 15
 		reduce_estate_nobles_loyalty_effect = yes
 		add_estate_burghers_loyalty_effect = yes
 	}
@@ -601,9 +715,7 @@ country_event = {
 		is_at_war = yes
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
@@ -621,7 +733,8 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_army_tradition = 10
+		add_army_tradition = 5
+		add_prestige = 10
 	}
 }
 
@@ -636,9 +749,7 @@ country_event = {
 		has_dlc = "Cradle of Civilization"
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 
 	option = {
@@ -647,14 +758,16 @@ country_event = {
 			factor = 75
 		}
 		add_army_tradition = -5
-		add_prestige = -10
 	}
 	option = {
 		name = army_professionalism_events.12.b #
 		ai_chance = {
 			factor = 25
 		}
-		add_yearly_manpower = -2
+		add_country_modifier = {
+			name = shortage_of_officers
+			duration = 5475
+		}
 	}
 }
 
@@ -667,13 +780,10 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		army_tradition = 40
 		NOT = { has_country_modifier = integration_of_local_militias }
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	is_triggered_only = yes
 	
 
 	option = {
@@ -681,19 +791,19 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_army_tradition = -10
+		add_army_tradition = -5
 	}
 	option = {
 		name = army_professionalism_events.13.b #
 		ai_chance = {
 			factor = 25
 		}
-		add_prestige = 20
+		add_army_tradition = 5
 		add_country_modifier = {
 			name = "integration_of_local_militias"
 			duration = 3650
 		}
-		add_yearly_manpower = -2
+		add_yearly_manpower = -1
 	}
 }
 
@@ -703,32 +813,18 @@ province_event = {
 	title = army_professionalism_events.14.t
 	desc = army_professionalism_events.14.d
 	picture = LAND_MILITARY_eventPicture
+	goto = root
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		has_building = weapons
 		NOT = { has_province_modifier = thriving_weapons_industry }
-		owner = {
-			army_tradition = 60
-		}
 	}
 	
 	is_mtth_scaled_to_size = 1
 	
 	mean_time_to_happen = {
 		months = 600
-		modifier = {
-			factor = 0.9
-			owner = {
-				army_tradition = 70
-			}
-		}
-		modifier = {
-			factor = 0.9
-			owner = {
-				army_tradition = 80
-			}
-		}
 	}
 	
 
@@ -747,6 +843,7 @@ province_event = {
 	title = army_professionalism_events.15.t
 	desc = army_professionalism_events.15.d
 	picture = LAND_MILITARY_eventPicture
+	goto = root
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
@@ -759,27 +856,12 @@ province_event = {
 		is_capital = no
 		NOT = { has_province_flag = regimental_town_flag }
 		NOT = { has_province_modifier = regimental_town }
-		owner = {
-			army_tradition = 60
-		}
 	}
 	
 	is_mtth_scaled_to_size = 1
 	
 	mean_time_to_happen = {
 		months = 700
-		modifier = {
-			factor = 0.8
-			owner = {
-				army_tradition = 70
-			}
-		}
-		modifier = {
-			factor = 0.8
-			owner = {
-				army_tradition = 80
-			}
-		}
 	}
 	
 
@@ -800,10 +882,10 @@ country_event = {
 	title = army_professionalism_events.16.t
 	desc = army_professionalism_events.16.d
 	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	goto = cheating_rolls
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		NOT = { army_tradition = 70 }
 		num_of_cities = 5
 		any_owned_province = {
 			is_capital = no
@@ -811,11 +893,17 @@ country_event = {
 			NOT = { has_province_modifier = cheated_rolls }
 			is_state = yes
 		}
+		NOT = { has_country_modifier = corrupt_rolls_cooldown_timer }
 	}
 	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 700
+		days = 1
+		modifier = { #hard to get professionalism up high enough before then
+			factor = 0.5
+			NOT = { is_year = 1500 }
+		}
 	}
 	
 	immediate = {
@@ -829,13 +917,17 @@ country_event = {
 				}
 				save_event_target_as = cheating_rolls
 			}
+			add_country_modifier = {
+				name = corrupt_rolls_cooldown_timer
+				duration = 7300
+				hidden = yes
+			}
 		}
 	}
 
 	option = {
 		name = army_professionalism_events.16.a #
-		add_army_tradition = -10
-		add_prestige = -10
+		add_army_tradition = -5
 		event_target:cheating_rolls = {
 			area = {
 				limit = {
@@ -854,7 +946,6 @@ country_event = {
 		name = army_professionalism_events.16.b #
 		reduce_estate_nobles_loyalty_effect = yes
 		add_army_tradition = 5
-		add_prestige = 5
 		event_target:cheating_rolls = {
 			area = {
 				limit = {
@@ -896,7 +987,6 @@ country_event = {
 				had_country_flag = { flag = gunpowder_core_activated days = 3650 } 
 			}
 			add_army_tradition = 5
-			add_prestige = 5
 		}
 		remove_country_modifier = gunpowder_core
 	}
@@ -909,6 +999,7 @@ province_event = {
 	title = army_professionalism_events.2.t
 	desc = army_professionalism_events.2.d
 	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	goto = root
 
 	is_triggered_only = yes
 
@@ -922,4 +1013,4 @@ province_event = {
 			}
 		}
 	}
-}
+}	
