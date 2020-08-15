@@ -92,7 +92,6 @@ innovativeness_ideas = {
 
 	pragmatism = {
 		innovativeness_gain = 1.0
-		embracement_cost = -0.50
 	}
 	patron_of_art  = {
 		embracement_cost = -0.50
@@ -175,65 +174,6 @@ religious_ideas = {
 		}
 	}
 }
-
-
-spy_ideas = {
-	category = DIP
-
-	bonus = {
-		rebel_support_efficiency = 0.50
-	}
-
-	efficient_spies = {
-		spy_offence = 0.5
-		global_spy_defence = 0.33
-	}		
-	agent_training = {
-		naval_morale = 0.1		
-	}
-	vetting = {
-		diplomats = 1
-	}	
-	additional_loyalist_recruitment = {
-		sunk_ship_morale_hit_recieved = -0.25
-		sailor_maintenance_modifer = -0.2
-	}
-	claim_fabrication = {
-		unjustified_demands = -0.5
-	}	
-	privateers = {
-		global_ship_trade_power = 0.2
-	}
-	audit_checks = {
-		ship_durability = 0.05
-	}
-	
-	ai_will_do = {
-		factor = 0.41
-		modifier = {
-			factor = 0
-			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_of_ports = 1 }
-			NOT = { is_colonial_nation = yes }
-		}
-		modifier = {
-			factor = 0.41
-			NOT = { num_of_ports = 10 }
-		}
-		modifier = {
-			factor = 0.41
-			num_of_cities = 50
-		}
-	}
-}
-
 
 offensive_ideas = {
 	category = MIL
@@ -682,88 +622,6 @@ quantity_ideas = {
 	}
 }
 
-
-expansion_ideas = {
-	category = ADM
-	important = yes
-
-	bonus = {
- 		cb_on_overseas = yes
-		native_uprising_chance = -0.5
-		native_assimilation = 1.0
-	}
-
-	additional_colonists = {
-		colonists = 1
-	}
-	additional_merchants = {
-		merchants = 1
-	}
-	faster_colonists = {
-		global_colonial_growth = 20
-	}
-	organised_recruiting = {
-		global_manpower_modifier = 0.10
-	}
-	additional_diplomats = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	improved_shipyards  = {
-		naval_forcelimit_modifier = 0.15
-		sailors_recovery_speed = 0.1
-	}
-	competetive_merchants  = {
-		global_trade_power = 0.2
-	}
-	
-	ai_will_do = {
-		factor = 0.48
-		modifier = {
-			factor = 10
-			OR = {
-				has_idea_group = exploration_ideas
-				is_colonial_nation = yes
-			}
-		}
-		modifier = {
-			factor = 5
-			OR = {
-				tag = CAS
-				tag = POR
-				tag = SPA
-			}
-		}
-		modifier = {
-			factor = 10
-			NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
-			tag = RUS
-			num_of_cities = 20
-			any_owned_province = {
-				has_empty_adjacent_province = yes
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_idea_group = exploration_ideas }
-			NOT = { is_colonial_nation = yes }
-			NOT = {
-				any_owned_province = {
-					has_empty_adjacent_province = yes
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
-			NOT = {
-				technology_group = western
-				technology_group = eastern
-				technology_group = muslim
-			}
-		}
-	}
-}
-
-
 administrative_ideas = {
 	category = ADM
 
@@ -895,64 +753,47 @@ influence_ideas = {
 	}
 }
 
-naval_ideas = {
+diplomatic_ideas = {
 	category = DIP
-
-	trigger = {
-		primitives = no
-	}
-
 	bonus = {
-		siege_blockade_progress = 1
+		monarch_military_power = 1
+		nobles_loyalty_modifier = 0.1
+		maratha_loyalty_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
 	}
 
-	boarding_parties = {
-		leader_naval_shock = 1
+	foreign_embassies = {
+		global_trade_goods_size_modifier = 0.1
 	}
-	improved_rams = {
-		heavy_ship_cost = -0.1
+	cabinet = {
+		merchants = 1
 	}
-	naval_cadets = {
-		leader_naval_fire = 1
+	grand_banquets = {
+		global_prov_trade_power_modifier = 0.25
 	}
-	naval_glory = {
-		prestige_from_naval = 1.0
-		naval_tradition_from_battle = 0.5
+	benign_diplomats = {
+		placed_merchant_power = 5
 	}
-	press_gangs = {
-		galley_cost = -0.15
+	experienced_diplomats  = {
+		min_autonomy_in_territories = -0.25
 	}
-	oak_forests_for_ships = {
-		heavy_ship_power = 0.20
-		galley_power = 0.25
+	flexible_negotiation = {
+		yearly_absolutism = 0.5
 	}
-	superior_seamanship = {
-		dip_tech_cost_modifier = -0.1
-		admiral_cost = -0.20
+	diplomatic_corps = {
+		max_absolutism = 10
 	}
 
 	ai_will_do = {
-		factor = 0.31
+		factor = 0.67
+
 		modifier = {
-			factor = 0
-			is_tribal = yes
+			factor = 2
+			is_emperor = yes
 		}
 		modifier = {
-			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_of_ports = 1 }
-			NOT = { is_colonial_nation = yes }
-		}
-		modifier = {
-			factor = 0.31
-			NOT = { num_of_ports = 10 }
-		}
-		modifier = {
-			factor = 0.31
-			num_of_cities = 50
+			factor = 1.5
+			vassal = 2
 		}
 	}
 }
