@@ -6,5 +6,5 @@ tags={
 }
 picture="thumbnail.png"
 name="GLORYmp"
-supported_version="1.29.6"
+supported_version="1.30.*"
 remote_file_id="2022057317"
