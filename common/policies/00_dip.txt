@@ -12,7 +12,7 @@ GLRY_policy_dip_1 = {
 		has_1_DIP_groups = yes
 	}
 
-	diplomatic_annexation_cost = -0.25
+	core_creation = -0.25
 	
 	ai_will_do = {
 		factor = 0.3
