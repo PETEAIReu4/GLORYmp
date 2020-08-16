@@ -527,7 +527,7 @@ country_event = {
 		else = {
 			add_treasury = -60
 		}
-		add_army_tradition = 5
+		add_mil_power = 50
 		add_prestige = 10
 		event_target:professional_country = {
 			add_opinion = {
