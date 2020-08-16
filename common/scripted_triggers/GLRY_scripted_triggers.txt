@@ -72,6 +72,7 @@ has_0_DIP_groups = {
 		full_idea_group = maritime_ideas
 		full_idea_group = influence_ideas
 		full_idea_group = naval_ideas
+		full_idea_group = diplomatic_ideas
 	}
 }
 
@@ -83,6 +84,7 @@ has_1_DIP_groups = {
 		full_idea_group = maritime_ideas
 		full_idea_group = influence_ideas
 		full_idea_group = naval_ideas
+		full_idea_group = diplomatic_ideas
 	}
 }
 
@@ -94,6 +96,7 @@ has_2_DIP_groups = {
 		full_idea_group = maritime_ideas
 		full_idea_group = influence_ideas
 		full_idea_group = naval_ideas
+		full_idea_group = diplomatic_ideas
     amount = 2
 	}
 }
@@ -106,6 +109,7 @@ has_3_DIP_groups = {
 		full_idea_group = maritime_ideas
 		full_idea_group = influence_ideas
 		full_idea_group = naval_ideas
+		full_idea_group = diplomatic_ideas
     amount = 3
 	}
 }
@@ -118,6 +122,7 @@ has_4_DIP_groups = {
 		full_idea_group = maritime_ideas
 		full_idea_group = influence_ideas
 		full_idea_group = naval_ideas
+		full_idea_group = diplomatic_ideas
     amount = 4
 	}
 }
