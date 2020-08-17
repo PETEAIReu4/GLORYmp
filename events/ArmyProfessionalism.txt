@@ -602,10 +602,7 @@ country_event = {
 		add_years_of_income = -0.25
 		add_yearly_manpower = -0.25
 		add_prestige = 15
-		add_country_modifier = {
-			name = "wargames"
-			duration = 3650
-		}
+		add_army_tradition = 15
 	}
 	option = {
 		name = army_professionalism_events.8.b #
