@@ -3823,9 +3823,6 @@ on_regiment_recruited = {
 
 # THIS = Province, FROM = Country
 on_mercenary_recruited = {
-	FROM = {
-		add_army_professionalism = -0.05
-	}
 }
 
 # THIS = One province in the state
