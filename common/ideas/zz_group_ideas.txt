@@ -881,23 +881,23 @@ arabian_ideas = {
 		trade_steering = 0.15
 	}
 	arabian_horses = {
-		cavalry_cost = -0.1
-		cavalry_flanking = 0.25
+		manpower_recovery_speed = 0.15
+		discipline = 0.05
 	}
 	land_of_the_prophet = {
-		global_unrest = -1
+		production_efficiency = 0.1
 	}
 	spreading_the_prophets_word = {
-		global_missionary_strength = 0.01
+		global_missionary_strength = 0.03
 	}
 	bedouin_traders = {
-		global_trade_power = 0.1
+		trade_efficiency = 0.1
 	}
 	arab_clan_loyalties = {
 		leader_land_manuever = 1
 	}
 	arabia = {
-		prestige = 1
+		development_cost = -0.1
 	}
 }
 
