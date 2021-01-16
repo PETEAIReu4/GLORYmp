@@ -91,7 +91,7 @@ innovativeness_ideas = {
 	}
 
 	pragmatism = {
-		innovativeness_gain = 1.0
+		innovativeness_gain = 0.5
 	}
 	patron_of_art  = {
 		embracement_cost = -0.50
@@ -101,9 +101,11 @@ innovativeness_ideas = {
 	}
 	dynamic_court = {
 		advisor_pool = 1
+		free_policy = 1
 	}
 	resilient_state = {
 		global_institution_spread = 1.0
+		global_trade_goods_size_modifier = 0.1
 	}
 	optimism = {
 		reform_progress_growth = 0.2
