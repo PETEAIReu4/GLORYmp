@@ -188,11 +188,11 @@ offensive_ideas = {
 		shock_damage = 0.20
 	}
 	national_conscripts = {
-		reinforce_speed = 0.33
+		reinforce_speed = 0.25
 		land_attrition = -0.25
 	}
 	superior_firepower = {
-		fire_damage = 0.15
+		fire_damage = 0.10
 	}
 	glorious_arms = {
 		prestige_from_land = 1.0
