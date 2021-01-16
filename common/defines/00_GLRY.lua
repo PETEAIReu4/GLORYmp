@@ -11,9 +11,6 @@ NDefines.NCountry.PS_NAVAL_BARRAGE = 20										-- [50]
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.83				-- [0.4]
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 40									-- [25]
 
---- MISC ---
-NDefines.NMilitary.SLACKEN_AP_DROP = 0.99 									-- [0.05] | button is disabled anyways, just backup fix for AI
-
 --- QOL CHANGES ---
 
 NDefines.NAI.PEACE_TIME_MONTHS = 30											-- [60]
