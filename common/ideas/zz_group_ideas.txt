@@ -881,7 +881,7 @@ arabian_ideas = {
 		trade_steering = 0.15
 	}
 	arabian_horses = {
-		manpower_recovery_speed = 0.15
+		manpower_recovery_speed = 0.30
 		discipline = 0.05
 	}
 	land_of_the_prophet = {
