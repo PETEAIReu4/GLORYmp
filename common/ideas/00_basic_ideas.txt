@@ -737,16 +737,16 @@ diplomatic_ideas = {
 	}
 
 	foreign_embassies = {
-		global_trade_goods_size_modifier = 0.1
+		legitimacy = 1.0
 	}
 	cabinet = {
-		merchants = 1
+		years_of_nationalism = -5
 	}
 	grand_banquets = {
 		global_prov_trade_power_modifier = 0.25
 	}
 	benign_diplomats = {
-		placed_merchant_power = 5
+		power_projection_from_insults = 1
 	}
 	experienced_diplomats  = {
 		min_autonomy_in_territories = -0.25
