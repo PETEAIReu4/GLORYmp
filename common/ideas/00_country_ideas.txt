@@ -14871,7 +14871,7 @@ POL_ideas = {
 		discipline = 0.05
 	}
 	focus_on_field_defences = {
-		land_morale = 0.10
+		land_morale = 0.15
 	}
 }
 
